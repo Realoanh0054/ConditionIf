@@ -46,37 +46,29 @@ public class MainApp {
 		 System.out.println("Nhap he so tu do, c = ");
 		 float c = sc.nextFloat();
 		 
-		 if (a == 0) 
-		 	{
-			 if (b == 0)
-			 {
+		 if (a == 0) {
+			 if (b == 0){
 				 if (c == 0)
 					 System.out.println("Phuong trinh co vo so nghiem");
 				 else 
 					 System.out.println("Phuong trinh vo nghiem");
-			 
 			 }
 			 else 
 				 System.out.println("Phuong trinh co 1 nghiem: " + "x = " + (-c / b));
-		 }
-		 else
-		 {
-		 //tinh delta
-		 float delta = b*b - 4*a*c;
-		 float x1;
-		 float x2;
-		 //tinh nghiem phuong trinh
-		 if (delta <0) System.out.println("Phuong trinh vo nghiem ");
-		 else if (delta == 0) {
-		 x1 = (-b / (2 * a));
-		 System.out.println("Phuong trinh co nghiem kep : " + "x1 = x2 = " +x1);
-		 }
-		 else 
-		 	{
-			 x1 = (float) ((-b + Math.sqrt(delta)) / (2*a));
-			 x2 = (float) ((-b - Math.sqrt(delta)) / (2*a));
-			 System.out.println("Phuong trinh co 2 nghiem la: " + "x1 = " + x1 + " va x2= " + x2);
-		 	}
+		 }else{
+			 //tinh delta
+			 float delta = b*b - 4*a*c;
+			 float x1,x2;
+			 //tinh nghiem phuong trinh
+			 if (delta <0) System.out.println("Phuong trinh vo nghiem ");
+			 else if (delta == 0) {
+				 x1 = (-b / (2 * a));
+				 System.out.println("Phuong trinh co nghiem kep : " + "x1 = x2 = " +x1);
+			 }else {
+				 x1 = (float) ((-b + Math.sqrt(delta)) / (2*a));
+				 x2 = (float) ((-b - Math.sqrt(delta)) / (2*a));
+				 System.out.println("Phuong trinh co 2 nghiem la: " + "x1 = " + x1 + " va x2= " + x2);
+			 }
 		 }
 		 
 		 //Bai9.5
@@ -86,11 +78,11 @@ public class MainApp {
          int h = sc.nextInt();
          System.out.println("Nhap u:");
          int u = sc.nextInt();
-         if ((g + h) > u && (h + u) > g && (g + u) > h)
-         {
+         if ((g + h) > u && (h + u) > g && (g + u) > h){
           System.out.println("Day la mot tam giac");
           System.out.println("g,h,u la ba canh cua mot tam giac"); 
-          }
+         } 
+         System.out.println("g,h,u khong phai la 3 canh cua 1 tam giac");
 		 
 	}
 
